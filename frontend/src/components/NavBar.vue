@@ -52,6 +52,15 @@
             <li class="nav-item">
               <router-link 
                 class="nav-link" 
+                :to="{ name: 'moment' }"
+                :class="{ 'active': $route.name === 'moment' }"
+              >
+                动态
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <router-link 
+                class="nav-link" 
                 :to="{ name: 'friends' }"
                 :class="{ 'active': $route.name === 'friends' }"
               >

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import FriendsView from '@/views/FriendsView.vue'
 import DiscoverView from '@/views/DiscoverView.vue'
+import MomentView from '@/views/MomentView.vue'
 import MessagesView from '@/views/MessagesView.vue'
 import LikesView from '@/views/LikesView.vue'
 import LoginView from '@/views/LoginView.vue'
@@ -23,6 +24,11 @@ const routes = [
     path: '/discover',
     name: 'discover',
     component: DiscoverView
+  },
+  {
+    path: '/moment',
+    name: 'moment',
+    component: MomentView
   },
   {
     path: '/messages',
