@@ -44,5 +44,5 @@ func Register(c *gin.Context) {
 }
 
 func Login() {
-	
+
 }
