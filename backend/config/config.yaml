@@ -1,13 +1,17 @@
 app:
-  name: App
-  port: 8080
+  name: "backend"
+  port: ":8080"
 
 database:
-  dsn: root:hhh2021...@tcp(127.0.0.1:3306)/tokove?charset=utf8mb4&parseTime=True&loc=Local
-  MaxIdleConns: 11
-  MaxOpenConns: 114
+  dsn: "root:hhh2021...@tcp(127.0.0.1:3306)/tokove?charset=utf8mb4&parseTime=True&loc=Local"
+  max_idle_conns: 10
+  max_open_conns: 100
 
 redis:
-  Addr: localhost:6379
-  DB: 0
-  Password: ""
+  addr: "127.0.0.1:6379"
+  db: 0
+  password: ""
+
+jwt:
+  secret: "your_secret_key"    # JWT 密钥
+  expire_hours: 168            # 过期时间，单位小时（7天 = 168小时）

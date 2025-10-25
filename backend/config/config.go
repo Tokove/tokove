@@ -11,13 +11,17 @@ type Config struct {
 	}
 	Database struct {
 		Dsn          string
-		MaxIdleConns uint
-		MaxOpenConns uint
+		MaxIdleConns int
+		MaxOpenConns int
 	}
 	Redis struct {
 		Addr     string
-		DB       uint
+		DB       int
 		Password string
+	}
+	JWT struct {
+		Secret      string
+		ExpireHours int
 	}
 }
 
@@ -40,4 +44,6 @@ func InitConfig() {
 		panic("解析配置文件失败: " + err.Error())
 	}
 
+	initDB()
+	initRedis()
 }

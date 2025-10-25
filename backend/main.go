@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"backend/config"
+	"backend/router"
+)
 
-func main(){
-	fmt.Println("你好")
+func main() {
+	config.InitConfig()
+
+	r := router.SetupRouter()
+
+	r.Run(config.AppConfig.App.Port)
 }
